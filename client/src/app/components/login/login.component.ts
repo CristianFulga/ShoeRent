@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
       },
       err => {
         console.error(err);
+        this.alertifyService.error('Username or Password incorrect');
       }
     );
   }

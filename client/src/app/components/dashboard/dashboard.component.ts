@@ -5,6 +5,7 @@ import { AlertifyService } from 'src/app/shared/alertify.service';
 import { AuthenticationService, UserDetails } from 'src/app/shared/authentication.service';
 import { PlanService } from 'src/app/shared/plan.service';
 
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -12,7 +13,7 @@ import { PlanService } from 'src/app/shared/plan.service';
 })
 export class DashboardComponent implements OnInit, OnChanges {
 
-  toDate = new Date();
+  toDate = new String();
   details: UserDetails;
   plan: Piani;
   shoe: Shoe;
@@ -21,7 +22,14 @@ export class DashboardComponent implements OnInit, OnChanges {
   constructor(
     public auth: AuthenticationService,
     private planService: PlanService,
-    private alertifyService: AlertifyService) { }
+    private alertifyService: AlertifyService) { 
+     var today = new Date();
+     var dd = String(today.getDate()).padStart(2, '0');
+     var mm = String(today.getMonth() + 7).padStart(2, '0'); //January is 0!
+     var yyyy = today.getFullYear();
+
+     this.toDate = mm + '/' + dd + '/' + yyyy;
+    }
 
   ngOnInit(): void {
     this.getUserDetails();
