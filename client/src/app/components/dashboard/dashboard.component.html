@@ -1,0 +1,87 @@
+<div class="bg-color">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="jumbotron text-center" style="margin-top: 100px;">
+                    <img src="../../../assets/img/jordan-1.png" class="rounded mx-auto d-block responsive"
+                        alt="nike jordan" width="400" height="250">
+                    <h1 class="my-5">DASHBOARD</h1>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                <div class="d-flex justify-content-around">
+                    <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+                        <h4>Piano Selezionato</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                <div class="d-flex justify-content-around">
+                    <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+                        <h4>Prossimo Pagamento</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+                <div class="d-flex justify-content-around">
+                    <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+                        <h4 (click)="eliminateAcc()">Elimina Account</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 mt-5" *ngIf="details.planId ==' '">
+                <div class="d-flex justify-content-around">
+                    <div class="item2 shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+                        <h4 routerLink="/piani">Per selezionare un piano vai sulla Home e clicca su Piani Disponibili,
+                            poi clicca su una scarpa</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 my-5" *ngIf="details.planId != ' '">
+                <div class="flex-container2" *ngIf="plan">
+                    <div class="flex-item shadow-lg p-3 mb-5 rounded" *ngIf="shoe"
+                        style="background-color: #c3c4c6;cursor: pointer;">
+                        <h4 class="color text-uppercase" style="text-decoration: underline;">scarpa scelta</h4>
+                        <img src={{shoe.imageURL}} alt="Yeezy shoe" width="180" height="170">
+                        <h5 class="color"> {{shoe.shoeName}} </h5>
+                        <!-- <h5 class="color">Yeezy 700 Wave Runner</h5> -->
+                        <br>
+                        <h4 class="color" style="text-decoration: underline;">PIANO SCELTO</h4>
+
+                        <h2 style="color: #3d7ccf;text-shadow: 0px 5px 10px rgb(71, 71, 71);">{{plan.nomePiano}}</h2>
+                        <h5 class="color"> {{plan.costo}} / {{plan.durata}}</h5>
+                        <!-- <h2 style="color: #3d7ccf;text-shadow: 0px 5px 10px rgb(71, 71, 71);">Hype</h2>
+                            <h5 class="color">99€/mese</h5> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="col-lg-4 col-md-6 col-sm-12 my-5" *ngIf="details.planId!=' '">
+                <div class="d-flex justify-content-around mb-5">
+                    <div class="item shadow-lg py-2 rounded" style="background-color: #c3c4c6;">
+                        <h4 class="color"> {{ details?.planId }} </h4>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 col-sm-12 my-5" *ngIf="details.planId != ' '">
+                <div class="d-flex justify-content-around mb-5">
+                    <div class="item shadow-lg py-2 rounded" style="background-color: #c3c4c6;">
+                        <h4 class="color">{{toDate | date:'d MMM y'}}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 my-5">
+                <div class="d-flex justify-content-around mb-5">
+                    <div class="item shadow-lg py-2 rounded" style="background-color: #7297c9; color: white;">
+                        <h4 (click)="logout()">LOGOUT</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
