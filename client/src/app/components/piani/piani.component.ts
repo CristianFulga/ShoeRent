@@ -14,6 +14,8 @@ export class PianiComponent implements OnInit {
 
   plans: Piani[];
   plan: Piani;
+    //EASTER EGG: Cerca ancora :(
+
 
   updateData: PlanIdAndShoeId = {
     planId: " ",
