@@ -14,6 +14,7 @@ import { PlanService } from 'src/app/shared/plan.service';
 export class DashboardComponent implements OnInit, OnChanges {
 
   toDate = new String();
+  //EASTER EGG: Hai trovato un biscotto!
   details: UserDetails;
   plan: Piani;
   shoe: Shoe;
