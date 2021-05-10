@@ -3,10 +3,10 @@ const Piani = mongoose.model('Piani');
 
 //read all plans
 module.exports.plansRead = (req, res) => {
-    console.log("get Request for All Pianis");
+    console.log("Request di tutti i Piani");
     Piani.find({}).exec(function(err, pianis){
         if(err) {
-            console.log("Error retriving pianis");
+            console.log("Errore ricevimento piani");
         } else {
             res.status(200).json(pianis);
         }
@@ -15,10 +15,10 @@ module.exports.plansRead = (req, res) => {
 
 //read single plan
 module.exports.planRead = (req, res) => {
-    console.log("get Request for a single Piani");
+    console.log("richiesta per un solo piano");
     Piani.findById(req.params.id).exec(function(err, piani){
         if(err) {
-            console.log("Error retriving a single piani");
+            console.log("errore ricevimento piano");
         } else {
             res.status(200).json(piani);
         }

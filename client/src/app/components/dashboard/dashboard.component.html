@@ -44,29 +44,17 @@
                 <div class="flex-container2" *ngIf="plan">
                     <div class="flex-item shadow-lg p-3 mb-5 rounded" *ngIf="shoe"
                         style="background-color: #c3c4c6;cursor: pointer;">
-                        <h4 class="color text-uppercase" style="text-decoration: underline;">scarpa scelta</h4>
+                        <h4 class="color text-uppercase" style="text-decoration: underline;">Scarpa Scelta</h4>
                         <img src={{shoe.imageURL}} alt="Yeezy shoe" width="180" height="170">
                         <h5 class="color"> {{shoe.shoeName}} </h5>
-                        <!-- <h5 class="color">Yeezy 700 Wave Runner</h5> -->
                         <br>
-                        <h4 class="color" style="text-decoration: underline;">PIANO SCELTO</h4>
+                        <h4 class="color" style="text-decoration: underline;">Piano Scelto</h4>
 
                         <h2 style="color: #3d7ccf;text-shadow: 0px 5px 10px rgb(71, 71, 71);">{{plan.nomePiano}}</h2>
                         <h5 class="color"> {{plan.costo}} / {{plan.durata}}</h5>
-                        <!-- <h2 style="color: #3d7ccf;text-shadow: 0px 5px 10px rgb(71, 71, 71);">Hype</h2>
-                            <h5 class="color">99€/mese</h5> -->
                     </div>
                 </div>
             </div>
-
-
-            <!-- <div class="col-lg-4 col-md-6 col-sm-12 my-5" *ngIf="details.planId!=' '">
-                <div class="d-flex justify-content-around mb-5">
-                    <div class="item shadow-lg py-2 rounded" style="background-color: #c3c4c6;">
-                        <h4 class="color"> {{ details?.planId }} </h4>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="col-lg-4 col-md-6 col-sm-12 my-5" *ngIf="details.planId != ' '">
                 <div class="d-flex justify-content-around mb-5">
@@ -78,7 +66,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12 my-5">
                 <div class="d-flex justify-content-around mb-5">
                     <div class="item shadow-lg py-2 rounded" style="background-color: #7297c9; color: white;">
-                        <h4 (click)="logout()">LOGOUT</h4>
+                        <h4 (click)="logout()">Logout</h4>
                     </div>
                 </div>
             </div>

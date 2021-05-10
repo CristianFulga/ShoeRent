@@ -11,19 +11,18 @@ const auth = jwt({
   algorithms: ['HS256']
 });
 
-//plans
+//piani
 router.get('/plans', ctrlPlans.plansRead);
 router.get('/plans/:id', ctrlPlans.planRead);
 
-//profile with authentication
+//profili con l'autenticazione
 router.get('/profile', auth, ctrlProfile.profileRead);
 router.delete('/profile', auth, ctrlProfile.profileDelete);
 router.put('/profile', auth, ctrlProfile.profileUpdate);
 
-// authentication
+// autenticazione
 router.post('/register', ctrlAuth.register);
 router.post('/login', ctrlAuth.login);
-// router.post('/update', ctrlAuth.update);
 
 module.exports = router;
 
