@@ -11,8 +11,9 @@
   
           <div class="flex-container">
             <div *ngFor="let item of plans" class="flex-item shadow-lg p-3 mb-5 bg-white rounded">
-              <h5 class="text-uppercase">Piano</h5>
+              <h5 class="text-uppercase">Plan</h5>
               <h3>{{ item.nomePiano }}</h3>
+              <br>
               <h3>{{ item.costo }} / {{ item.durata }}</h3>
             </div>
           </div>
