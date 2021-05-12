@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit, OnChanges {
     private alertifyService: AlertifyService) { 
      var today = new Date();
      var dd = String(today.getDate()).padStart(2, '0');
-     var mm = String(today.getMonth() + 7).padStart(2, '0'); //January is 0!
+     var mm = String(today.getMonth() + 2).padStart(2, '0'); //January is 0!
      var yyyy = today.getFullYear();
 
      this.toDate = mm + '/' + dd + '/' + yyyy;
