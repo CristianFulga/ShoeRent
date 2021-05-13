@@ -5,7 +5,7 @@
                 <div class="jumbotron text-center" style="margin-top: 60px;">
                     <div class="flex-container">
                         <div class="flex-item shadow-lg p-2 mb-5 bg-white rounded" *ngFor="let item of plans"
-                        (click)="onClickPlan(item)">
+                        (click)="onClickShoe(item)">
                             <h4>Plan</h4>
                             <h3 style="color: #3d7ccf;">{{ item.nomePiano }}</h3>
                             <h3 style="color: #3d7ccf;">{{ item.costo }}</h3>
@@ -26,7 +26,7 @@
                                     Name: <span class="text-white">{{ subitem.shoeName }}</span> <br>
                                     Model: <span class="text-white">{{ subitem.model }}</span> <br>
                                     Version: <span class="text-white">{{ subitem.version }}</span> <br>
-                                    Type: <span class="text-white">{{ subitem.type }}</span> <br>
+                                    Brand New Price: <span class="text-white">{{ subitem.price }}</span> <br>
                                     Colors: <span class="text-white">{{ subitem.colors.color1 }}, </span>
                                     <span class="text-white">{{ subitem.colors.color2 }}, </span>
                                     <span class="text-white">{{ subitem.colors.color3 }}</span>

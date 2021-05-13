@@ -6,6 +6,6 @@ export interface Shoe {
     model: string;
     imageURL: string;
     version: string;
-    type: string;
+    price: string;
     colors?: Colors;
 }
