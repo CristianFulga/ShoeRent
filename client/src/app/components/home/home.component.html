@@ -25,14 +25,14 @@
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 my-5" *ngIf="auth.isLoggedIn()">
         <div class="d-flex justify-content-around mb-5">
-            <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+            <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: rgb(0, 175, 220); color: white;">
                 <h4 routerLink="/piani">Piani Disponibili</h4>
             </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-12 my-5" *ngIf="!auth.isLoggedIn()">
         <div class="d-flex justify-content-around mb-5">
-            <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: #7297c9; color: white;">
+            <div class="item shadow-lg py-2 mb-5 rounded" style="background-color: rgb(0, 175, 220); color: white;">
                 <h4 routerLink="/login">Please Login To See Plans</h4>
             </div>
         </div>

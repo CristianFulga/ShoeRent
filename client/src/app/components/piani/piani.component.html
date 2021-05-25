@@ -7,16 +7,16 @@
                         <div class="flex-item shadow-lg p-2 mb-5 bg-white rounded" *ngFor="let item of plans"
                         (click)="onClickShoe(item)">
                             <h4>Plan</h4>
-                            <h3 style="color: #3d7ccf;">{{ item.nomePiano }}</h3>
-                            <h3 style="color: #3d7ccf;">{{ item.costo }}</h3>
-                            <h3 style="color: #3d7ccf;">{{ item.durata }}</h3>
+                            <h3 style="color: rgb(0, 175, 220);">{{ item.nomePiano }}</h3>
+                            <h3 style="color: rgb(0, 175, 220);">{{ item.costo }}</h3>
+                            <h3 style="color: rgb(0, 175, 220);">{{ item.durata }}</h3>
                         </div>
                     </div>
     
                     <div class="flex-container2 mb-5">
                         <div *ngFor="let item of plans" class="flex-item shadow-lg p-3 mb-5 rounded">
                             <h5 class="pb-3">AVAILABLE SHOES</h5>
-                            <div *ngFor="let subitem of item.shoes" style="color: #5b7aa1;"
+                            <div *ngFor="let subitem of item.shoes" style="color: rgb(0, 118, 148);"
                                 (click)="getPlanIdAndShoeId(item._id, subitem.idScarpa)">
                                 <!-- {{item._id}}, {{subitem.idScarpa}} -->
                                 <!-- {{subitem.idScarpa}} <br> -->
@@ -26,10 +26,10 @@
                                     Name: <span class="text-white">{{ subitem.shoeName }}</span> <br>
                                     Model: <span class="text-white">{{ subitem.model }}</span> <br>
                                     Version: <span class="text-white">{{ subitem.version }}</span> <br>
-                                    Brand New Price: <span class="text-white">{{ subitem.price }}</span> <br>
                                     Colors: <span class="text-white">{{ subitem.colors.color1 }}, </span>
-                                    <span class="text-white">{{ subitem.colors.color2 }}, </span>
-                                    <span class="text-white">{{ subitem.colors.color3 }}</span>
+                                            <span class="text-white">{{ subitem.colors.color2 }}, </span>
+                                            <span class="text-white">{{ subitem.colors.color3 }}</span> <br>
+                                    Brand New Price: <span class="text-white">{{ subitem.price }}</span> <br>
                                     <br><br>
                                 </div>
                             </div>
