@@ -27,7 +27,6 @@ export class RegisterComponent implements OnInit {
   ];
 
   ages: any[] = [
-    { value: '9¾' },
     { value: '18' },
     { value: '19' },
     { value: '20' },
@@ -109,8 +108,7 @@ export class RegisterComponent implements OnInit {
     { value: '96' },
     { value: '97' },
     { value: '98' },
-    { value: '99' },
-    { value: 'I just want a cookie'}
+    { value: '99' }
   ];
 
   countries: any[] = [
