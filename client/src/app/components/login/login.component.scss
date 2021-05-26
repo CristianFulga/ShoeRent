@@ -9,6 +9,22 @@
   height: auto;
 }
 
+.jumbotron {
+  padding: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  background: none;
+
+  h2 {
+    font-size:100px;
+    color: rgb(0, 175, 220);
+    text-shadow: 0px 5px 10px rgb(71, 71, 71);
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
+
+
 // h1 {
 //   font-size: 8vw;
 //   text-shadow: 0px 5px 10px rgb(71, 71, 71);

@@ -24,16 +24,19 @@
   margin-bottom: 0;
   background: none;
 
-  h1 {
+  h2 {
     font-size:100px;
     color: rgb(0, 175, 220);
     text-shadow: 0px 5px 10px rgb(71, 71, 71);
+    vertical-align: middle;
+    display: inline-block;
   }
 }
 
-h2 {
-  font-size: 90px;
-}
+//h2 {
+//  font-size: 90px;
+//  color: rgb(0, 175, 220);
+//}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -101,4 +104,8 @@ h2 {
       font-size:150px;
     }
   }
+}
+
+.logo{
+  vertical-align: middle;
 }
